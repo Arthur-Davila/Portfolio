@@ -1,0 +1,49 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.section-title {
+  font-family: 'Fira Code', monospace;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 0.15em;
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 10%;
+  max-width: 440px;
+}
+
+.about-text p {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.0rem;
+  line-height: 1.7;
+  
+  color: var(--text-secondary);
+}
+
+.about-text strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+
+.glowing-moon {
+  filter: drop-shadow(0 0 4px var(--accent-gold));
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

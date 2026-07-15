@@ -1,0 +1,31 @@
+/* variables.css - Versão Corrigida */
+:root {
+  /* Background */
+  --bg: #070B14;
+  --bg-2: #0B1220;
+  --surface: #101726;
+  --surface-hover: #172133;
+  --bg-color: #030712;      /* Adicionar */
+  --bg-card: #080d1a;       /* Adicionar */
+
+  /* Text */
+  --title: #F5F7FA;
+  --text: #C8CDD8;
+  --muted: #9098A8;
+  --text-primary: #ffffff;   /* Adicionar */
+  --text-secondary: #9ca3af; /* Adicionar */
+  --text-muted: #b5b6b6;     /* Adicionar */
+
+  /* Accent */
+  --primary: #8FB8FF;
+  --secondary: #E9C46A;
+  --accent-gold: #e2b659;    /* Adicionar */
+  --accent-blue: #537fe7;    /* Adicionar */
+
+  /* Border */
+  --border: rgba(255,255,255,.08);
+  --border-color: rgba(255, 255, 255, 0.07); /* Adicionar */
+
+  /* Shadow */
+  --shadow: 0 20px 60px rgba(0,0,0,.35);
+}

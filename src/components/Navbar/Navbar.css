@@ -1,0 +1,51 @@
+
+.navbar{
+    width:100%;
+
+    padding:25px 70px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:100;
+}
+
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:26px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-size: 16px;
+}
+.logo span{
+    color:#7DB7FF;
+    font-size:28px;
+     font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-weight:700;
+}
+
+nav{
+    display:flex;
+    gap:40px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+     font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-size:16px;
+    font-weight:200;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#7DB7FF;
+}
