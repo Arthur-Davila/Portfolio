@@ -6,7 +6,6 @@ import mount from "../../assets/mount1.png";
 export default function About() {
   return (
     <section id="about" className="section-timeline">
-      <div className="timeline-dot"></div>
       <div className="about-grid">
         <div className="about-text">
           <h2 className="section-title ">sobre mim</h2>
@@ -20,7 +19,7 @@ export default function About() {
             Atualmente estudo na <strong>CESAR School</strong> e busco minha primeira oportunidade para aprender, contribuir e crescer junto com um time.
           </p>
         </div>
-        <img src={mount} style={{maxWidth:'100%'}}></img>
+        <img src={mount} alt="Ilustração de montanhas sob um céu estrelado" />
               </div>
     </section>
   );

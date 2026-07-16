@@ -6,25 +6,12 @@ import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <main  
-      style={{
-        backgroundImage: "url('/images/teste.png')",
-        /* 100% 100% força a imagem a ter EXATAMENTE a mesma largura 
-          e altura que o seu elemento <main> acumular com as seções ativas.
-        */
-        backgroundSize: "100% 100%",
-        backgroundPosition: "center top",
-        backgroundRepeat: "no-repeat", 
-        width: "100%",
-        minHeight: "100vh",
-        position: "relative",
-      }}
+    <main className="background">
+      <section className="hero" id="home"
     >
-      <section className="hero" id="home">
         <ShootingStars />
         <Navbar />
 
@@ -36,7 +23,6 @@ function App() {
             <br />
             <span>soluções.</span>
           </h1>
-          <div>...</div>
           <p className="description">
             Estudante de Ciência da Computação apaixonado por desenvolvimento de
             software, tecnologia e resolução de problemas.
@@ -46,7 +32,6 @@ function App() {
             ver projetos
             <span>→</span>
           </a>
-          <div className="line">...</div>
         </div>
       </section>
 
@@ -56,7 +41,6 @@ function App() {
       <Skills />
       <Contact />
 
-      <Footer />
     </main>
   );
 }

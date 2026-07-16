@@ -1,173 +1,109 @@
-main{
-    width:100%;
-    
-}
+* { box-sizing: border-box; }
 
-.hero{
-    position:relative;
-
-    width:100%;
-    height:100vh;
-
-    overflow:hidden;
-}
-
-.background{
-    position:absolute;
-    inset:0;
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-}
-.overlay{
-
-background:
-linear-gradient(
-90deg,
-rgba(4,7,12,.70) 0%,
-rgba(4,7,12,.40) 40%,
-rgba(4,7,12,.10) 100%
-);
-}
-.hero-content{
-    position:absolute;
-
-    left:12%;
-    top:55%;
-
-    transform:translateY(-50%);
-
-    z-index:5;
-
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-
-    max-width:520px;
-}
-.subtitle{
-    font-size:22px;
-    font-weight:300;
-}
-.hero-content h1{
-    font-family:"IBM Plex Mono", monospace;
-
-    font-size:clamp(2.8rem,7vw,3.8rem);
-
-    font-weight:300;
-
-    line-height:1.1;
-
-    letter-spacing:-0.03em;
-
-    color:#F5F5F5;
-}.description{
-
-    margin-top:40px;
-
-    width:400px;
-
-    font-family:"IBM Plex Mono",monospace;
-
-    font-size:1rem;
-
-    line-height:2;
-
-    color:#C4C8D0;
-}
-
-.hero-link{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    margin-top:50px;
-
-  color:#7DB7FF;
-
-    text-decoration:none;
-
-    font-family:"IBM Plex Mono";
-
-    transition:.3s;
-}
-.hero-content span{
-  color:#7DB7FF;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
-
-:root {
-  --bg-color: #030712;
-  --bg-card: #080d1a;
-  --text-primary: #ffffff;
-  --text-secondary: #9ca3af;
-  --text-muted: #4b5563;
-  --accent-gold: #e2b659;
-  --accent-blue: #537fe7;
-  --border-color: rgba(255, 255, 255, 0.07);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-secondary);
-  font-family: 'Inter', sans-serif;
+  margin: 0;
+  min-width: 320px;
+  background: #020711;
+  color: #e8edf6;
+  font-family: "Fira Code", ui-monospace, monospace;
   overflow-x: hidden;
 }
 
-code, .font-mono {
-  font-family: 'Fira Code', monospace;
+.background {
+  --page-width: min(1220px, calc(100% - 96px));
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #030812;
+  background-image: linear-gradient(180deg, rgba(2, 8, 18, .12) 0 34%, #030810 47%, #03070d 100%);
 }
 
-/* Container principal de largura limitada */
-.portfolio-container {
-  max-width: 1000px;
+.hero {
+  min-height: 690px;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, rgba(0, 5, 16, .2), rgba(1, 7, 17, .12)), url('/images/background1.png');
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.hero-content {
+  width: var(--page-width);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 128px 62px 96px;
   position: relative;
+  z-index: 3;
 }
 
-/* Linha do tempo vertical brilhante */
-.timeline-wrapper {
-  position: relative;
+.hero-content h1 {
+  margin: 0 0 29px;
+  color: #f4f5f9;
+  font-weight: 300;
+  font-size: clamp(2.75rem, 5.1vw, 4.7rem);
+  letter-spacing: .035em;
+  line-height: 1.22;
 }
 
-.timeline-line {
+.hero-content h1 span, .hero-link, .project-techs, .skill-divider { color: #7DB7FF; }
+
+.hero-content .description {
+  max-width: 490px;
+  margin: 0 0 42px;
+  color: #bfc4d0;
+  font-size: .92rem;
+  font-weight: 300;
+  line-height: 2.05;
+}
+
+.hero-link, .github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 34px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid rgba(125, 183, 255, .55);
+  text-decoration: none;
+  font-size: .9rem;
+  transition: color .2s, border-color .2s;
+}
+.hero-link:hover, .github-link:hover { color: #b9d9ff; border-color: #b9d9ff; }
+.hero-link span, .github-link span { font-size: 1.2rem; }
+
+.section-timeline, .projects-section, .skills-section, .contact-section {
+  width: var(--page-width);
+  margin: 0 auto;
+  position: relative;
+  padding-left: 62px;
+  padding-right: 62px;
+}
+
+.section-timeline::before, .projects-section::before, .skills-section::before {
+  content: "";
   position: absolute;
-  left: 2rem;
+  left: 7px;
   top: 0;
-  bottom: 0;
+  bottom: -72px;
   width: 1px;
-  background: linear-gradient(to bottom, var(--accent-blue) 0%, rgba(83, 127, 231, 0.1) 50%, var(--accent-blue) 100%);
+  background: linear-gradient(#78899d, rgba(117, 138, 164, .1));
 }
-
-/* Seções alinhadas com a linha */
-.section-timeline {
-  position: relative;
-  padding-left: 4rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-/* Ponto brilhante em cada seção */
-.timeline-dot {
+.section-timeline::after, .projects-section::after, .skills-section::after {
+  content: "";
   position: absolute;
-  left: calc(2rem - 5px);
-  top: 5.4rem;
-  width: 11px;
-  height: 11px;
+  top: 0;
+  left: 4px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 0 0 10px 3px var(--accent-blue), 0 0 20px 6px rgba(83, 127, 231, 0.5);
+  background: #e8f0ff;
+  box-shadow: 0 0 12px 3px #719dff;
+}
+
+@media (max-width: 740px) {
+  .background { --page-width: min(100% - 36px, 560px); }
+  .hero { min-height: 630px; background-position: 58% bottom; }
+  .hero-content { padding: 108px 16px 65px; }
+  .section-timeline, .projects-section, .skills-section, .contact-section { padding-left: 32px; padding-right: 12px; }
+  .section-timeline::before, .projects-section::before, .skills-section::before { left: 5px; }
+  .section-timeline::after, .projects-section::after, .skills-section::after { left: 2px; }
 }
