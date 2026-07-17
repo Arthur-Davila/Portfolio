@@ -77,7 +77,7 @@ function Projects() {
         ))}
       </div>
 
-      <a href="https://github.com/arthurdavila" target="_blank" rel="noreferrer" className="github-link">
+      <a href="https://github.com/arthur-davila" target="_blank" rel="noreferrer" className="github-link">
         ver todos no github <span>→</span>
       </a>
     </section>
