@@ -57,7 +57,7 @@ function Projects() {
 
   return (
     <section className="projects-section" id="projects">
-      <h2 className="projects-title">projetos</h2>
+      <h2 className="projects-title">PROJETOS</h2>
       
       <div className="projects-grid">
         {projectsList.map((project) => (
@@ -77,7 +77,7 @@ function Projects() {
         ))}
       </div>
 
-      <a href="https://github.com/arthur-davila" target="_blank" rel="noreferrer" className="github-link">
+      <a classnamhref="https://github.com/arthur-davila" target="_blank" rel="noreferrer" className="github-link">
         ver todos no github <span>→</span>
       </a>
     </section>

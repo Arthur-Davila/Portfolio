@@ -3,6 +3,7 @@
     margin-top: 0;
     padding: 50px 62px 14px;
     border-top: 1px solid rgba(223, 229, 245, 0.12);
+    font-family: "Fira Code", "JetBrains Mono", monospace;
 }
 
 .contact-container {
@@ -14,20 +15,22 @@
     align-items: center;
 }
 
-.contact-info h2 {
+/* TEXTO DE CONTATO */
+.text-contact h2 {
     margin: 0 0 23px;
-    color: #eff1f5;
-    font-size: 1.2rem;
-    font-weight: 300;
+    color: #f0f4ff;
+    font-size: 1.3rem;
+    font-weight: 400;
     letter-spacing: 0.12em;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
-.contact-info p {
+.text-contact p {
     margin: 0;
-    color: #a9b0bd;
-    font-size: 0.75rem;
-    font-weight: 300;
-    line-height: 1.8;
+    color: #d5dce8;
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.9;
 }
 
 .contact-links {
@@ -40,38 +43,70 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    color: #d2d5dc;
+    color: #e4eaf5;
     text-decoration: none;
-    font-size: 0.72rem;
-    transition: color 0.2s;
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(125, 183, 255, 0.02);
+    border: 1px solid transparent;
 }
 
 .contact-item:hover {
     color: #7DB7FF;
+    background: rgba(125, 183, 255, 0.06);
+    border-color: rgba(125, 183, 255, 0.08);
+    transform: translateX(4px);
+}
+
+.contact-item .contact-label {
+    color: #7DB7FF;
+    font-size: 0.65rem;
+    opacity: 0.6;
+    margin-right: 4px;
 }
 
 .contact-icon {
-    width: 19px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
 
+.contact-item:hover .contact-icon {
+    opacity: 1;
+}
+
+/* ILUSTRAÇÃO DA ÁRVORE - AUMENTADA */
 .contact-illustration {
+    position: relative;
     justify-self: end;
-    width: 126px;
+    width: 180px; /* Aumentado de 126px para 180px */
     opacity: 0.8;
 }
 
 .tree-svg {
     width: 100%;
+    position: absolute;
+    z-index: -99;
     height: auto;
 }
+
 
 .footer-credits {
     padding-top: 15px;
     border-top: 1px solid rgba(223, 229, 245, 0.1);
-    color: #727987;
+    color: #8a94a8;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
+    font-weight: 300;
+}
+
+.footer-credits span {
+    color: #7DB7FF;
 }
 
 @media (max-width: 740px) {
@@ -86,5 +121,10 @@
     
     .contact-illustration {
         display: none;
+    }
+    
+    .contact-item {
+        font-size: 0.8rem;
+        padding: 6px 10px;
     }
 }

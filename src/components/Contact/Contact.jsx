@@ -1,22 +1,21 @@
 import React from "react";
 import "./Contact.css";
+import treeUrl from "../../assets/file.svg";
 
 function Contact() {
   return (
     <section className="contact-section" id="contact">
       <div className="contact-container">
         <div className="text-contact">
-
           <h2>vamos conversar?</h2>
           <p>
             Estou em busca de novas oportunidades.<br />
             Se tiver um projeto legal ou uma vaga,<br />
             ficarei feliz em conversar!
           </p>
-          </div>
-        {/* Lado Esquerdo: Textos de chamada e Links de rede social */}
+        </div>
+
         <div className="contact-info">
-          
           <div className="contact-links">
             <a href="mailto:arthurad.profissional@gmail.com" className="contact-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="contact-icon">
@@ -39,28 +38,16 @@ function Contact() {
                 <rect x="2" y="9" width="4" height="12" />
                 <circle cx="4" cy="4" r="2" />
               </svg>
-             linkedin.com/in/arthuradavila/
+              linkedin.com/in/arthuradavila/
             </a>
           </div>
-
         </div>
 
-                  {/* Lado Direito: Ilustração do Pinheiro */}
+        {/* Lado Direito: Ilustração do Pinheiro */}
         <div className="contact-illustration">
-          <svg viewBox="0 0 100 120" className="tree-svg">
-            {/* Linha do horizonte */}
-            <path d="M0 110 Q 50 105 100 110" stroke="rgba(255,255,255,0.15)" strokeWidth="1" fill="none" />
-            {/* Tronco */}
-            <rect x="48" y="90" width="4" height="20" fill="rgba(255,255,255,0.15)" />
-            {/* Copas do Pinheiro */}
-            <polygon points="50,20 30,50 70,50" stroke="rgba(255,255,255,0.15)" strokeWidth="1" fill="none" />
-            <polygon points="50,40 25,75 75,75" stroke="rgba(255,255,255,0.15)" strokeWidth="1" fill="none" />
-            <polygon points="50,65 20,100 80,100" stroke="rgba(255,255,255,0.15)" strokeWidth="1" fill="none" />
-          </svg>
+          <img src={treeUrl} alt="Pinheiro" className="tree-svg tree-white" />
         </div>
-
       </div>
-
     </section>
   );
 }

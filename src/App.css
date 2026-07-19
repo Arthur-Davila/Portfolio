@@ -1,6 +1,10 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -20,44 +24,8 @@ body {
   background-image: linear-gradient(180deg, rgba(2, 8, 18, .12) 0 34%, #030810 47%, #03070d 100%);
 }
 
-.hero {
-  min-height: 690px;
-  position: relative;
-  overflow: hidden;
-  background-image: linear-gradient(180deg, rgba(0, 5, 16, .2), rgba(1, 7, 17, .12)), url('/images/background1.png');
-  background-position: center bottom;
-  background-size: cover;
-}
-
-.hero-content {
-  width: var(--page-width);
-  margin: 0 auto;
-  padding: 128px 62px 96px;
-  position: relative;
-  z-index: 3;
-}
-
-.hero-content h1 {
-  margin: 0 0 29px;
-  color: #f4f5f9;
-  font-weight: 300;
-  font-size: clamp(2.75rem, 5.1vw, 4.7rem);
-  letter-spacing: .035em;
-  line-height: 1.22;
-}
-
-.hero-content h1 span, .hero-link, .project-techs, .skill-divider { color: #7DB7FF; }
-
-.hero-content .description {
-  max-width: 490px;
-  margin: 0 0 42px;
-  color: #bfc4d0;
-  font-size: .92rem;
-  font-weight: 300;
-  line-height: 2.05;
-}
-
-.hero-link, .github-link {
+/* LINKS GLOBAIS */
+.github-link {
   display: inline-flex;
   align-items: center;
   gap: 34px;
@@ -65,12 +33,24 @@ body {
   border-bottom: 1px solid rgba(125, 183, 255, .55);
   text-decoration: none;
   font-size: .9rem;
+  color: #7DB7FF;
   transition: color .2s, border-color .2s;
 }
-.hero-link:hover, .github-link:hover { color: #b9d9ff; border-color: #b9d9ff; }
-.hero-link span, .github-link span { font-size: 1.2rem; }
 
-.section-timeline, .projects-section, .skills-section, .contact-section {
+.github-link:hover {
+  color: #b9d9ff;
+  border-color: #b9d9ff;
+}
+
+.github-link span {
+  font-size: 1.2rem;
+}
+
+/* SEÇÕES GLOBAIS */
+.section-timeline,
+.projects-section,
+.skills-section,
+.contact-section {
   width: var(--page-width);
   margin: 0 auto;
   position: relative;
@@ -78,7 +58,9 @@ body {
   padding-right: 62px;
 }
 
-.section-timeline::before, .projects-section::before, .skills-section::before {
+.section-timeline::before,
+.projects-section::before,
+.skills-section::before {
   content: "";
   position: absolute;
   left: 7px;
@@ -87,7 +69,10 @@ body {
   width: 1px;
   background: linear-gradient(#78899d, rgba(117, 138, 164, .1));
 }
-.section-timeline::after, .projects-section::after, .skills-section::after {
+
+.section-timeline::after,
+.projects-section::after,
+.skills-section::after {
   content: "";
   position: absolute;
   top: 0;
@@ -99,11 +84,38 @@ body {
   box-shadow: 0 0 12px 3px #719dff;
 }
 
+/* CLASSES GLOBAIS */
+.skill-divider {
+  color: #7DB7FF;
+}
+
+.project-techs {
+  color: #7DB7FF;
+}
+
+/* RESPONSIVO GLOBAL */
 @media (max-width: 740px) {
-  .background { --page-width: min(100% - 36px, 560px); }
-  .hero { min-height: 630px; background-position: 58% bottom; }
-  .hero-content { padding: 108px 16px 65px; }
-  .section-timeline, .projects-section, .skills-section, .contact-section { padding-left: 32px; padding-right: 12px; }
-  .section-timeline::before, .projects-section::before, .skills-section::before { left: 5px; }
-  .section-timeline::after, .projects-section::after, .skills-section::after { left: 2px; }
+  .background {
+    --page-width: min(100% - 36px, 560px);
+  }
+
+  .section-timeline,
+  .projects-section,
+  .skills-section,
+  .contact-section {
+    padding-left: 32px;
+    padding-right: 12px;
+  }
+
+  .section-timeline::before,
+  .projects-section::before,
+  .skills-section::before {
+    left: 5px;
+  }
+
+  .section-timeline::after,
+  .projects-section::after,
+  .skills-section::after {
+    left: 2px;
+  }
 }

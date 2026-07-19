@@ -1,5 +1,90 @@
-.skills-section { padding-top: 35px; padding-bottom: 68px; }
-.skills-container { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
-.skill-item { color: #e4e6eb; font-size: .88rem; font-weight: 300; }
-.skill-divider { margin: 0 15px; font-size: .65rem; }
-@media (max-width: 600px) { .skills-container { column-gap: 6px; row-gap: 15px; } .skill-divider { margin: 0 6px; } }
+.skills-section { 
+  padding-top: 35px; 
+  padding-bottom: 68px; 
+}
+
+.skills-container { 
+  display: flex; 
+  flex-wrap: wrap; 
+  align-items: center; 
+  gap: 8px; 
+}
+
+.skill-item { 
+  color: #f0f4ff;
+  font-size: 1rem; 
+  font-weight: 400;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all .3s ease;
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+  cursor: default;
+}
+.skill-item:hover {
+  cursor: pointer;
+}
+
+/* SEPARADOR - PARADO POR PADRÃO */
+.skill-divider { 
+  margin: 0 12px; 
+  font-size: 0.8rem;
+  color: #7DB7FF;
+  opacity: 0.4;
+  display: inline-block;
+  transition: all .3s ease;
+}
+
+/* Quando passar o mouse na PALAVRA, o SEPARADOR ANTERIOR pisca */
+.skill-divider:has(+.skill-item:hover)   {
+  cursor: pointer;
+  animation: pulseAndSpin 1.8s ease-in-out infinite;
+}
+
+/* Quando passar o mouse no PRÓPRIO SEPARADOR */
+.skill-divider:hover {
+  cursor: pointer;
+  animation: pulseAndSpin 1.8s ease-in-out infinite;
+  color: #b9d9ff;
+  opacity: 1;
+}
+
+@keyframes pulseAndSpin {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.4;
+  }
+  25% {
+    transform: scale(1.4) rotate(90deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: scale(1.3) rotate(270deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 600px) { 
+  .skills-container { 
+    column-gap: 6px; 
+    row-gap: 15px; 
+    justify-content: center;
+  } 
+  
+  .skill-divider { 
+    margin: 0 6px; 
+    font-size: 0.6rem;
+  }
+  
+  .skill-item {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}

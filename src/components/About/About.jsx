@@ -8,7 +8,7 @@ export default function About() {
     <section id="about" className="section-timeline">
       <div className="about-grid">
         <div className="about-text">
-          <h2 className="section-title ">sobre mim</h2>
+          <h2 className="section-title ">SOBRE MIM</h2>
           <p>
             Gosto de entender como as coisas funcionam e transformar isso em algo útil.
           </p>

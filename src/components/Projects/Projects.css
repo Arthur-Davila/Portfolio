@@ -1,12 +1,106 @@
-.projects-section { padding-top: 40px; padding-bottom: 78px; }
-.projects-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.project-card { min-height: 335px; padding: 27px 24px 24px; display: flex; flex-direction: column; align-items: flex-start; border: 1px solid rgba(222, 229, 245, .15); background: rgba(9, 14, 23, .19); transition: transform .25s, border-color .25s, background .25s; }
-.project-card:hover { transform: translateY(-5px); border-color: rgba(125, 183, 255, .55); background: rgba(18, 24, 37, .52); }
-.project-icon { width: 53px; height: 53px; margin: 0 auto 27px; color: #eff1f6; }
-.project-icon svg { width: 100%; height: 100%; }
-.project-card h3 { min-height: 48px; margin: 0 0 17px; color: #edf0f5; font-size: .94rem; font-weight: 400; line-height: 1.4; }
-.project-card p { margin: 0 0 20px; color: #aeb5c2; font-size: .72rem; font-weight: 300; line-height: 1.8; }
-.project-techs { margin-top: auto; font-size: .7rem; }
-.github-link { align-self: center; margin-top: 30px; color: #c6c9d0; border-color: rgba(198,201,208,.45); font-size: .76rem; }
-@media (max-width: 980px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 540px) { .projects-grid { grid-template-columns: 1fr; } .project-card { min-height: 270px; } }
+.projects-section { 
+  padding-top: 40px; 
+  padding-bottom: 78px; 
+}
+
+.projects-grid { 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+}
+
+.project-card { 
+  min-height: 335px; 
+  padding: 27px 24px 24px; 
+  display: flex; 
+  cursor: pointer;
+  flex-direction: column; 
+  align-items: flex-start; 
+  border: 1px solid rgba(222, 229, 245, .15); 
+  background: rgba(9, 14, 23, .19); 
+  transition: transform .25s, border-color .25s, background .25s;
+  border-radius: 16px;
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+}
+
+.project-card:hover { 
+  transform: translateY(-5px); 
+  border-color: rgba(125, 183, 255, .55); 
+  background: rgba(18, 24, 37, .52); 
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.project-icon { 
+  width: 53px; 
+  height: 53px; 
+  margin: 0 auto 27px; 
+  color: #eff1f6; 
+}
+
+.project-icon svg { 
+  width: 100%; 
+  height: 100%; 
+}
+
+/* TÍTULO DO PROJETO - MAIS VISÍVEL */
+.project-card h3 { 
+  min-height: 48px; 
+  margin: 0 0 17px; 
+  color: #f0f4ff; /* Mais claro */
+  font-size: 1rem; /* Aumentado */
+  font-weight: 500; /* Mais grosso */
+  line-height: 1.4;
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+}
+
+/* DESCRIÇÃO - MAIS VISÍVEL */
+.project-card p { 
+  margin: 0 0 20px; 
+  color: #c8d0dc; /* Mais claro */
+  font-size: 0.875rem; /* Aumentado */
+  font-weight: 400; /* Mais grosso */
+  line-height: 1.8;
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+}
+
+.project-techs { 
+  margin-top: auto; 
+  font-size: 0.85rem;
+  color: #7DB7FF;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+}
+
+.github-link { 
+  display:flex;
+  justify-content: center;
+  align-self: center; 
+  margin-top: 5%; 
+  color: #d5dce8;   
+  cursor: pointer;
+  font-size: 1rem; 
+  font-weight: 400;
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+}
+
+.github-links:hover {
+  color: #7DB7FF;
+  border-color: rgba(125, 183, 255, .55);
+}
+
+@media (max-width: 980px) { 
+  .projects-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  } 
+}
+
+@media (max-width: 540px) { 
+  .projects-grid { 
+    grid-template-columns: 1fr; 
+  } 
+  
+  .project-card { 
+    min-height: 270px; 
+  } 
+}

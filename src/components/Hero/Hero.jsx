@@ -1,74 +1,26 @@
-// import "../Hero/Hero.css";
+import "../Hero/Hero.css";
 
-// function Hero() {
-//   return (
-//     <section className="hero" id="home">
+function Hero() {
+  return (
+      <div className="hero-content">
+          <h1>
+            Transformo
+            <br />
+            ideias em
+            <br />
+            <span>soluções.</span>
+          </h1>
+          <p className="description">
+            Estudante de Ciência da Computação apaixonado por desenvolvimento de
+            software, tecnologia e resolução de problemas.
+          </p>
 
-//       <div className="stars">
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//       </div>
+          <a href="#projects" className="hero-link">
+            ver projetos
+            <span>→</span>
+          </a>
+        </div>
+  );
+}
 
-
-//       <div className="hero-content">
-
-//         <div className="hero-text">
-
-//           <p className="hello">
-//             Olá, eu sou
-//           </p>
-
-//           <h1>
-//             Arthur
-//           </h1>
-
-//           <h2>
-//             Desenvolvedor Front-end
-//           </h2>
-
-//           <p className="description">
-//             Crio interfaces modernas, responsivas
-//             e experiências digitais utilizando
-//             tecnologia e criatividade.
-//           </p>
-
-
-//           <div className="buttons">
-
-//             <button>
-//               Ver projetos
-//             </button>
-
-//             <button className="outline">
-//               Contato
-//             </button>
-
-//           </div>
-
-//         </div>
-
-
-//         <div className="profile">
-
-//           <div className="moon-effect"></div>
-
-//           <div className="photo">
-//             Sua foto aqui
-//           </div>
-
-//         </div>
-
-
-//       </div>
-
-
-//       <div className="shooting-star"></div>
-
-//     </section>
-//   );
-// }
-
-// export default Hero;
+export default Hero;

@@ -10,10 +10,10 @@ function Navbar() {
       </div>
 
       <nav>
-        <a href="#about">sobre</a>
-        <a href="#projects">projetos</a>
-        <a href="#skills">skills</a>
-        <a href="#contact">contato</a>
+        <a href="#about">SOBRE</a>
+        <a href="#projects">PROJETOS</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#contact">CONTATO</a>
       </nav>
     </header>
   );
