@@ -1,6 +1,5 @@
 import React from "react";
 import "./Contact.css";
-import treeUrl from "../../assets/file.svg";
 
 function Contact() {
   return (
@@ -43,10 +42,6 @@ function Contact() {
           </div>
         </div>
 
-        {/* Lado Direito: Ilustração do Pinheiro */}
-        <div className="contact-illustration">
-          <img src={treeUrl} alt="Pinheiro" className="tree-svg tree-white" />
-        </div>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 .contact-section {
     width: 100%;
     margin-top: 0;
-    padding: 50px 62px 14px;
+    padding: 50px 14px;
     border-top: 1px solid rgba(223, 229, 245, 0.12);
     font-family: "Fira Code", "JetBrains Mono", monospace;
 }
@@ -9,13 +9,12 @@
 .contact-container {
     max-width: 1080px;
     margin: 0 auto 31px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 0.45fr;
-    gap: 58px;
+    display: flex;
+    justify-content: space-around;
+    gap: 110px;
     align-items: center;
 }
 
-/* TEXTO DE CONTATO */
 .text-contact h2 {
     margin: 0 0 23px;
     color: #f0f4ff;
@@ -79,22 +78,6 @@
 .contact-item:hover .contact-icon {
     opacity: 1;
 }
-
-/* ILUSTRAÇÃO DA ÁRVORE - AUMENTADA */
-.contact-illustration {
-    position: relative;
-    justify-self: end;
-    width: 180px; /* Aumentado de 126px para 180px */
-    opacity: 0.8;
-}
-
-.tree-svg {
-    width: 100%;
-    position: absolute;
-    z-index: -99;
-    height: auto;
-}
-
 
 .footer-credits {
     padding-top: 15px;
